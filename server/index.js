@@ -1,4 +1,4 @@
-import "dotenv/config";
+import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
@@ -18,6 +18,9 @@ process.on("unhandledRejection", (err) => {
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+// Load server/.env no matter which folder the server is started from
+// (on Hostinger, real environment variables set in hPanel take priority).
+dotenv.config({ path: join(__dirname, ".env") });
 const DATA_DIR = join(__dirname, "data");
 const QUOTES_FILE = join(DATA_DIR, "quotes.json");
 const CONTACTS_FILE = join(DATA_DIR, "contacts.json");

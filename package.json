@@ -1,0 +1,16 @@
+{
+  "name": "newmax-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Newmax Industries Pvt. Ltd. website (React client + Express server, deployed as one Node app)",
+  "scripts": {
+    "install:all": "npm --prefix client install --include=dev && npm --prefix server install",
+    "build": "npm run install:all && npm --prefix client run build",
+    "start": "node server/index.js",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

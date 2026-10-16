@@ -46,6 +46,6 @@ Without these, submissions are still saved to the JSON file.
 
 ## Build for production
 ```bash
-cd client && npm run build      # outputs client/dist
+cd client && npm run build      # outputs server/dist
 ```
-Serve `client/dist` as static files (the Express server already serves it if present).
+The build goes to `server/dist`, which the Express server serves. See DEPLOY.md for Hostinger.
