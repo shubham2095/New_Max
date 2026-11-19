@@ -226,6 +226,7 @@ export default function Header() {
             <NavLink to="/" end onClick={close}>Home</NavLink>
             <NavLink to="/products" onClick={close}>Products</NavLink>
             <NavLink to="/about" onClick={close}>About</NavLink>
+            <NavLink to="/gallery" onClick={close}>Gallery</NavLink>
             <NavLink to="/events" onClick={close}>Events</NavLink>
             <NavLink to="/contact" onClick={close}>Contact</NavLink>
             <NavLink to="/contact" className="cta" onClick={close}>

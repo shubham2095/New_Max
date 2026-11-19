@@ -118,6 +118,21 @@ export const events = [
   { year: "2025", city: "Delhi", image: "/images/events/delhi-2025.avif" },
 ];
 
+// Gallery = every machine photo from `products` + extra exhibition photos.
+// To add a photo: drop the file in client/public/images and add a line to `galleryExtras`.
+const galleryExtras = [
+  { title: "Stranding Machine", image: "/images/new1.jpg" },
+  { title: "Extruder with Material Dryers", image: "/images/new2.jpg" },
+  { title: "Cable Extruder", image: "/images/new3.jpg" },
+];
+
+export const galleryCategories = ["All", "Machines", "Exhibition"];
+
+export const gallery = [
+  ...products.map((p) => ({ title: p.name, image: p.image, slug: p.slug, tagline: p.tagline, category: "Machines" })),
+  ...galleryExtras.map((g) => ({ ...g, category: "Exhibition" })),
+];
+
 export const certificate = {
   title: "ISO 9001:2015",
   subtitle: "Certificate of Registration",

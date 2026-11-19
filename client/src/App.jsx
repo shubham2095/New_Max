@@ -10,6 +10,7 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Quote from "./pages/Quote.jsx";
 import Events from "./pages/Events.jsx";
+import Gallery from "./pages/Gallery.jsx";
 
 function ScrollTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="*" element={<Home />} />
           <Route path="/quote" element={<Quote />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
       <Footer />
